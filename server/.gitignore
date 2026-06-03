@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+logs/server/firebase-key.json
+server/firebase-key.json
+firebase-key.json
+logs/
+*.log
