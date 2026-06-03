@@ -23,7 +23,7 @@ export interface CreateTeerthaPayload {
   doublePrice?: string;
   inclusions?: string[];
   itinerary?: {
-    day: string;
+    day: any;
     points: string[];
   }[];
   staysHeading?: string;

@@ -1,4 +1,4 @@
-[
+export const blogs = [
   {
     slug: "complete-guide-char-dham-yatra-2025",
     title: "The Complete Guide to Char Dham Yatra 2025",

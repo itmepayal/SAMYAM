@@ -1,4 +1,4 @@
-[
+export const enquiries = [
   {
     name: "Rajesh Sharma",
     phoneNumber: "+91 98765 43210",

@@ -1,24 +1,33 @@
-const teerthaData = [
+import { CreateTeerthaPayload } from "../modules/teerthas/teerthas.service";
+
+export const teerthas: CreateTeerthaPayload[] = [
   {
     slug: "ujjain",
     name: "Mahakaleshwar Jyotirlinga Yatra",
-    tagline: "The Timeless Seat of Mahakal",
-    slogan: "Jai Mahakal",
+    description:
+      "Immerse yourself in the divine presence of Mahakaleshwar Jyotirlinga and experience the spiritual grandeur of Ujjain, one of the seven sacred cities of India.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80",
     img: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1609766857901-6d2c8a7c8e1e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=1200&q=80",
+    ],
+    region: "Madhya Pradesh",
+    significance: "One of the twelve Jyotirlingas; ancient sacred city",
     duration: "4 Days / 3 Nights",
-    region: "Ujjain, Madhya Pradesh",
+    tagline: "Jai Mahakal",
+    slogan: "Jai Mahakal",
     date: "10 Dec 2026",
     desc: "Immerse yourself in the divine presence of Mahakaleshwar Jyotirlinga and experience the spiritual grandeur of Ujjain, one of the seven sacred cities of India.",
-    highlights: [
-      "Mahakaleshwar Bhasma Aarti",
-      "Harsiddhi Temple",
-      "Kal Bhairav Temple",
-      "Ram Ghat",
-      "Spiritual Discourses",
-      "Meditation Sessions",
-    ],
     triplePrice: "₹19,999",
     doublePrice: "₹24,999",
+    highlights: [
+      "Bhasma Aarti at Mahakaleshwar Temple",
+      "Evening Aarti at Ram Ghat",
+      "Visit to Kal Bhairav Temple",
+      "Meditation Session at Sandipani Ashram",
+    ],
     inclusions: [
       "Hotel Accommodation",
       "Daily Meals",
@@ -28,18 +37,18 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: ["Arrival in Ujjain", "Check-In", "Evening Ram Ghat Visit"],
       },
       {
-        day: "2",
+        day: "Day 2",
         points: ["Mahakaleshwar Darshan", "Bhasma Aarti", "Kal Bhairav Temple"],
       },
       {
-        day: "3",
+        day: "Day 3",
         points: ["Harsiddhi Temple", "Sandipani Ashram", "Meditation Session"],
       },
-      { day: "4", points: ["Morning Darshan", "Breakfast", "Departure"] },
+      { day: "Day 4", points: ["Morning Darshan", "Breakfast", "Departure"] },
     ],
     staysHeading: "Comfortable Sacred Stay",
     staysDesc:
@@ -58,27 +67,36 @@ const teerthaData = [
         items: ["Bhasma Aarti", "Meditation", "Evening Aarti"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "kedarnath",
     name: "Kedarnath Divine Pilgrimage",
-    tagline: "Journey to the Abode of Shiva",
-    slogan: "Har Har Mahadev",
+    description:
+      "Experience the divine Himalayan energy of Kedarnath and connect with one of the holiest Jyotirlingas in India.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
     img: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1200&q=80",
+      "https://images.unsplash.com/photo-1585123334904-845d60e97b29?w=1200&q=80",
+    ],
+    region: "Uttarakhand",
+    significance: "One of the twelve Jyotirlingas; highest Himalayan shrine",
     duration: "6 Days / 5 Nights",
-    region: "Kedarnath, Uttarakhand",
+    tagline: "Har Har Mahadev",
+    slogan: "Har Har Mahadev",
     date: "15 May 2027",
     desc: "Experience the divine Himalayan energy of Kedarnath and connect with one of the holiest Jyotirlingas in India.",
-    highlights: [
-      "Kedarnath Temple Darshan",
-      "Himalayan Trek",
-      "Bhairavnath Temple",
-      "Meditation in Nature",
-      "Sacred River Visits",
-    ],
     triplePrice: "₹34,999",
     doublePrice: "₹39,999",
+    highlights: [
+      "Darshan at Kedarnath Jyotirlinga",
+      "Himalayan Trek Experience",
+      "Morning Puja & Meditation",
+      "Visit to Guptkashi & Rudraprayag",
+    ],
     inclusions: [
       "Accommodation",
       "Meals",
@@ -87,12 +105,21 @@ const teerthaData = [
       "Temple Assistance",
     ],
     itinerary: [
-      { day: "1", points: ["Arrival at Haridwar", "Orientation", "Transfer"] },
-      { day: "2", points: ["Drive to Guptkashi", "Temple Visits"] },
-      { day: "3", points: ["Trek to Kedarnath", "Evening Darshan"] },
-      { day: "4", points: ["Morning Puja", "Meditation", "Exploration"] },
-      { day: "5", points: ["Return Trek", "Rest"] },
-      { day: "6", points: ["Departure"] },
+      {
+        day: "Day 1",
+        points: ["Arrival at Haridwar", "Orientation", "Transfer"],
+      },
+      { day: "Day 2", points: ["Drive to Guptkashi", "Temple Visits"] },
+      {
+        day: "Day 3",
+        points: ["Trek to Kedarnath", "Evening Darshan"],
+      },
+      {
+        day: "Day 4",
+        points: ["Morning Puja", "Meditation", "Exploration"],
+      },
+      { day: "Day 5", points: ["Return Trek", "Rest"] },
+      { day: "Day 6", points: ["Departure"] },
     ],
     staysHeading: "Mountain Spiritual Retreat",
     staysDesc:
@@ -111,27 +138,36 @@ const teerthaData = [
         items: ["Mountain Meditation", "Morning Aarti", "Spiritual Trek"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "rameshwaram",
     name: "Rameshwaram Jyotirlinga Yatra",
-    tagline: "Where Rama Worshipped Shiva",
-    slogan: "Om Namah Shivaya",
+    description:
+      "Visit the sacred island of Rameshwaram and experience one of the most revered Jyotirlingas associated with Lord Rama.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80",
     img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1200&q=80",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=80",
+    ],
+    region: "Tamil Nadu",
+    significance: "One of the twelve Jyotirlingas; sacred Char Dham site",
     duration: "5 Days / 4 Nights",
-    region: "Rameshwaram, Tamil Nadu",
+    tagline: "Om Namah Shivaya",
+    slogan: "Om Namah Shivaya",
     date: "20 Jan 2027",
     desc: "Visit the sacred island of Rameshwaram and experience one of the most revered Jyotirlingas associated with Lord Rama.",
-    highlights: [
-      "Ramanathaswamy Temple",
-      "22 Holy Wells",
-      "Dhanushkodi Visit",
-      "Agni Theertham",
-      "Spiritual Rituals",
-    ],
     triplePrice: "₹22,999",
     doublePrice: "₹27,999",
+    highlights: [
+      "Darshan at Ramanathaswamy Temple",
+      "Holy Bath at 22 Sacred Wells",
+      "Dhanushkodi Excursion",
+      "Sea Ritual Bath at Agni Theertham",
+    ],
     inclusions: [
       "Accommodation",
       "Meals",
@@ -140,11 +176,11 @@ const teerthaData = [
       "Guide Services",
     ],
     itinerary: [
-      { day: "1", points: ["Arrival", "Temple Visit", "Orientation"] },
-      { day: "2", points: ["Holy Bath Rituals", "Temple Darshan"] },
-      { day: "3", points: ["Dhanushkodi Excursion", "Meditation"] },
-      { day: "4", points: ["Special Puja", "Spiritual Sessions"] },
-      { day: "5", points: ["Departure"] },
+      { day: "Day 1", points: ["Arrival", "Temple Visit", "Orientation"] },
+      { day: "Day 2", points: ["Holy Bath Rituals", "Temple Darshan"] },
+      { day: "Day 3", points: ["Dhanushkodi Excursion", "Meditation"] },
+      { day: "Day 4", points: ["Special Puja", "Spiritual Sessions"] },
+      { day: "Day 5", points: ["Departure"] },
     ],
     staysHeading: "Coastal Spiritual Comfort",
     staysDesc: "Relaxing accommodations close to the sacred temple complex.",
@@ -170,28 +206,37 @@ const teerthaData = [
         ],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "varanasi",
     name: "Kashi Vishwanath Jyotirlinga Yatra",
-    tagline: "The Eternal City of Light",
-    slogan: "Har Har Gange",
+    description:
+      "Walk the sacred ghats of Kashi and seek the blessings of Kashi Vishwanath, the lord of the universe, in the oldest living city in the world.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1561361058-c24e8c4f4802?w=800&q=80",
     img: "https://images.unsplash.com/photo-1561361058-c24e8c4f4802?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1200&q=80",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80",
+    ],
+    region: "Uttar Pradesh",
+    significance:
+      "One of the twelve Jyotirlingas; oldest living city in the world",
     duration: "5 Days / 4 Nights",
-    region: "Varanasi, Uttar Pradesh",
+    tagline: "Har Har Gange",
+    slogan: "Har Har Gange",
     date: "5 Nov 2026",
     desc: "Walk the sacred ghats of Kashi and seek the blessings of Kashi Vishwanath, the lord of the universe, in the oldest living city in the world.",
-    highlights: [
-      "Kashi Vishwanath Darshan",
-      "Ganga Aarti at Dashashwamedh Ghat",
-      "Boat Ride on the Ganges",
-      "Sankat Mochan Temple",
-      "Sarnath Visit",
-      "Kashi Corridor Walk",
-    ],
     triplePrice: "₹21,999",
     doublePrice: "₹26,999",
+    highlights: [
+      "Kashi Vishwanath Temple Darshan",
+      "Sunrise Boat Ride on Ganga",
+      "Evening Ganga Aarti at Dashashwamedh Ghat",
+      "Sarnath Excursion",
+    ],
     inclusions: [
       "Hotel Accommodation",
       "Daily Meals",
@@ -201,11 +246,11 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: ["Arrival in Varanasi", "Check-In", "Evening Ganga Aarti"],
       },
       {
-        day: "2",
+        day: "Day 2",
         points: [
           "Early Morning Boat Ride",
           "Kashi Vishwanath Darshan",
@@ -213,15 +258,18 @@ const teerthaData = [
         ],
       },
       {
-        day: "3",
+        day: "Day 3",
         points: [
           "Sarnath Excursion",
           "Meditation Session",
           "Sankat Mochan Temple",
         ],
       },
-      { day: "4", points: ["Ghats Walk", "Special Puja", "Cultural Evening"] },
-      { day: "5", points: ["Morning Aarti", "Breakfast", "Departure"] },
+      {
+        day: "Day 4",
+        points: ["Ghats Walk", "Special Puja", "Cultural Evening"],
+      },
+      { day: "Day 5", points: ["Morning Aarti", "Breakfast", "Departure"] },
     ],
     staysHeading: "Heritage Stay on the Ghats",
     staysDesc:
@@ -240,28 +288,36 @@ const teerthaData = [
         items: ["Ganga Aarti", "Sunrise Boat Ride", "Evening Puja"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "tirupati",
     name: "Tirumala Tirupati Devasthanam Yatra",
-    tagline: "The Richest Shrine on Earth",
-    slogan: "Om Namo Venkatesaya",
+    description:
+      "Seek the divine blessings of Lord Venkateswara at Tirumala, one of the most visited religious sites in the world, perched atop the sacred Seshachalam hills.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&q=80",
     img: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1590577976322-3d2d6a2130f5?w=1200&q=80",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=80",
+    ],
+    region: "Andhra Pradesh",
+    significance: "Most visited religious site in the world; Vaishnavite Dham",
     duration: "4 Days / 3 Nights",
-    region: "Tirupati, Andhra Pradesh",
+    tagline: "Om Namo Venkatesaya",
+    slogan: "Om Namo Venkatesaya",
     date: "8 Feb 2027",
     desc: "Seek the divine blessings of Lord Venkateswara at Tirumala, one of the most visited religious sites in the world, perched atop the sacred Seshachalam hills.",
-    highlights: [
-      "Tirumala Venkateswara Darshan",
-      "Kapila Theertham",
-      "Govindaraja Swamy Temple",
-      "Akasha Ganga Waterfalls",
-      "Special VIP Darshan",
-      "Prasadam Distribution",
-    ],
     triplePrice: "₹18,999",
     doublePrice: "₹23,999",
+    highlights: [
+      "VIP Darshan at Tirumala Temple",
+      "Suprabhatam Seva",
+      "Kapila Theertham Visit",
+      "Padmavathi Devi Temple Darshan",
+    ],
     inclusions: [
       "TTD Approved Accommodation",
       "Meals",
@@ -271,18 +327,18 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: ["Arrival in Tirupati", "Check-In", "Govindaraja Swamy Temple"],
       },
       {
-        day: "2",
+        day: "Day 2",
         points: ["Ascent to Tirumala", "VIP Darshan", "Kapila Theertham"],
       },
       {
-        day: "3",
+        day: "Day 3",
         points: ["Morning Darshan", "Akasha Ganga Visit", "Prasadam"],
       },
-      { day: "4", points: ["Descent", "Breakfast", "Departure"] },
+      { day: "Day 4", points: ["Descent", "Breakfast", "Departure"] },
     ],
     staysHeading: "TTD Guest House Stay",
     staysDesc:
@@ -305,28 +361,36 @@ const teerthaData = [
         items: ["VIP Darshan", "Suprabhatam Seva", "Kalyanam"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "shirdi",
     name: "Shirdi Sai Baba Yatra",
-    tagline: "Sab Ka Malik Ek",
-    slogan: "Om Sai Ram",
+    description:
+      "Experience the divine love and miracles of Sai Baba at Shirdi, the holy town that draws millions of devotees seeking blessings of faith, patience and charity.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80",
     img: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1561361058-c24e8c4f4802?w=1200&q=80",
+      "https://images.unsplash.com/photo-1609766857901-6d2c8a7c8e1e?w=1200&q=80",
+    ],
+    region: "Maharashtra",
+    significance: "Shrine of Sai Baba; major pilgrimage for all faiths",
     duration: "3 Days / 2 Nights",
-    region: "Shirdi, Maharashtra",
+    tagline: "Om Sai Ram",
+    slogan: "Om Sai Ram",
     date: "1 Mar 2027",
     desc: "Experience the divine love and miracles of Sai Baba at Shirdi, the holy town that draws millions of devotees seeking blessings of faith, patience and charity.",
-    highlights: [
-      "Sai Baba Samadhi Mandir Darshan",
-      "Dwarkamai Visit",
-      "Chavadi Procession",
-      "Lendi Baug",
-      "Gurusthan",
-      "Midnight Aarti",
-    ],
     triplePrice: "₹14,999",
     doublePrice: "₹18,999",
+    highlights: [
+      "Samadhi Mandir Darshan",
+      "Kakad Aarti at Dawn",
+      "Dwarkamai & Chavadi Visit",
+      "Lendi Baug Tour",
+    ],
     inclusions: [
       "Accommodation",
       "Daily Meals",
@@ -336,7 +400,7 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: [
           "Arrival in Shirdi",
           "Check-In",
@@ -344,10 +408,13 @@ const teerthaData = [
         ],
       },
       {
-        day: "2",
+        day: "Day 2",
         points: ["Morning Kakad Aarti", "Dwarkamai Visit", "Lendi Baug Tour"],
       },
-      { day: "3", points: ["Morning Darshan", "Chavadi Visit", "Departure"] },
+      {
+        day: "Day 3",
+        points: ["Morning Darshan", "Chavadi Visit", "Departure"],
+      },
     ],
     staysHeading: "Peaceful Ashram-Style Stay",
     staysDesc:
@@ -366,28 +433,36 @@ const teerthaData = [
         items: ["Kakad Aarti", "Dhoop Aarti", "Shej Aarti"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "dwarka",
     name: "Dwarkadhish Jyotirlinga Yatra",
-    tagline: "The Gateway to Lord Krishna",
-    slogan: "Jai Dwarkadhish",
+    description:
+      "Visit Dwarka, one of the four sacred Dhams and the ancient kingdom of Lord Krishna, where the spiritual and historical converge on the shores of the Arabian Sea.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=800&q=80",
     img: "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=80",
+      "https://images.unsplash.com/photo-1605283176568-9b41fde3672e?w=1200&q=80",
+    ],
+    region: "Gujarat",
+    significance: "One of the four Char Dhams; ancient kingdom of Lord Krishna",
     duration: "5 Days / 4 Nights",
-    region: "Dwarka, Gujarat",
+    tagline: "Jai Dwarkadhish",
+    slogan: "Jai Dwarkadhish",
     date: "12 Apr 2027",
     desc: "Visit Dwarka, one of the four sacred Dhams and the ancient kingdom of Lord Krishna, where the spiritual and historical converge on the shores of the Arabian Sea.",
-    highlights: [
-      "Dwarkadhish Temple Darshan",
-      "Nageshwar Jyotirlinga",
-      "Bet Dwarka Island",
-      "Rukmini Devi Temple",
-      "Gomti Ghat",
-      "Sunset Aarti",
-    ],
     triplePrice: "₹23,999",
     doublePrice: "₹28,999",
+    highlights: [
+      "Dwarkadhish Temple Darshan",
+      "Nageshwar Jyotirlinga Visit",
+      "Boat Journey to Bet Dwarka",
+      "Sunset Aarti at Gomti Ghat",
+    ],
     inclusions: [
       "Accommodation",
       "Daily Meals",
@@ -397,23 +472,23 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: ["Arrival in Dwarka", "Check-In", "Gomti Ghat Aarti"],
       },
       {
-        day: "2",
+        day: "Day 2",
         points: [
           "Dwarkadhish Temple Darshan",
           "Rukmini Devi Temple",
           "Nageshwar Jyotirlinga",
         ],
       },
-      { day: "3", points: ["Boat to Bet Dwarka", "Darshan", "Return"] },
+      { day: "Day 3", points: ["Boat to Bet Dwarka", "Darshan", "Return"] },
       {
-        day: "4",
+        day: "Day 4",
         points: ["Gopi Talav", "Meditation Session", "Sunset Aarti"],
       },
-      { day: "5", points: ["Morning Darshan", "Breakfast", "Departure"] },
+      { day: "Day 5", points: ["Morning Darshan", "Breakfast", "Departure"] },
     ],
     staysHeading: "Seaside Spiritual Retreat",
     staysDesc:
@@ -436,28 +511,36 @@ const teerthaData = [
         items: ["Sunset Aarti", "Morning Abhishek", "Boat Puja"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "puri",
     name: "Jagannath Puri Dham Yatra",
-    tagline: "Abode of the Lord of the Universe",
-    slogan: "Jai Jagannath",
+    description:
+      "Seek the blessings of Lord Jagannath at the sacred Puri Dham, one of the four sacred Dhams of India and home to the world-famous Rath Yatra festival.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1590577976322-3d2d6a2130f5?w=800&q=80",
     img: "https://images.unsplash.com/photo-1590577976322-3d2d6a2130f5?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1609766857901-6d2c8a7c8e1e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80",
+    ],
+    region: "Odisha",
+    significance: "One of the four Char Dhams; home of the Rath Yatra festival",
     duration: "5 Days / 4 Nights",
-    region: "Puri, Odisha",
+    tagline: "Jai Jagannath",
+    slogan: "Jai Jagannath",
     date: "25 Jun 2027",
     desc: "Seek the blessings of Lord Jagannath at the sacred Puri Dham, one of the four sacred Dhams of India and home to the world-famous Rath Yatra festival.",
-    highlights: [
-      "Jagannath Temple Darshan",
-      "Rath Yatra Experience",
-      "Konark Sun Temple",
-      "Swargadwar Beach",
-      "Gundicha Temple",
-      "Mahaprasad",
-    ],
     triplePrice: "₹20,999",
     doublePrice: "₹25,999",
+    highlights: [
+      "Jagannath Temple Darshan",
+      "Mahaprasad Experience",
+      "Konark Sun Temple Excursion",
+      "Evening Aarti at Gundicha Temple",
+    ],
     inclusions: [
       "Accommodation",
       "Daily Meals",
@@ -467,22 +550,22 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: ["Arrival in Puri", "Check-In", "Swargadwar Beach Visit"],
       },
       {
-        day: "2",
+        day: "Day 2",
         points: ["Jagannath Temple Darshan", "Mahaprasad", "Singhadwara Walk"],
       },
       {
-        day: "3",
+        day: "Day 3",
         points: ["Konark Sun Temple Excursion", "Chandrabhaga Beach"],
       },
       {
-        day: "4",
+        day: "Day 4",
         points: ["Gundicha Temple", "Spiritual Discourse", "Evening Aarti"],
       },
-      { day: "5", points: ["Morning Darshan", "Departure"] },
+      { day: "Day 5", points: ["Morning Darshan", "Departure"] },
     ],
     staysHeading: "Beachside Pilgrim Stay",
     staysDesc:
@@ -501,28 +584,36 @@ const teerthaData = [
         items: ["Mahaprasad", "Evening Aarti", "Rath Yatra"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "mathura-vrindavan",
     name: "Mathura Vrindavan Krishna Yatra",
-    tagline: "Birthplace of the Divine Flute",
-    slogan: "Radhe Radhe",
+    description:
+      "Relive the divine leelas of Lord Krishna in Mathura and Vrindavan, the twin sacred cities where every stone, river and forest resonates with the vibration of Krishna consciousness.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1605283176568-9b41fde3672e?w=800&q=80",
     img: "https://images.unsplash.com/photo-1605283176568-9b41fde3672e?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=1200&q=80",
+      "https://images.unsplash.com/photo-1561361058-c24e8c4f4802?w=1200&q=80",
+    ],
+    region: "Uttar Pradesh",
+    significance: "Birthplace of Lord Krishna; sacred Braj pilgrimage circuit",
     duration: "4 Days / 3 Nights",
-    region: "Mathura & Vrindavan, Uttar Pradesh",
+    tagline: "Radhe Radhe",
+    slogan: "Radhe Radhe",
     date: "20 Mar 2027",
     desc: "Relive the divine leelas of Lord Krishna in Mathura and Vrindavan, the twin sacred cities where every stone, river and forest resonates with the vibration of Krishna consciousness.",
-    highlights: [
-      "Krishna Janmabhoomi Darshan",
-      "Banke Bihari Temple",
-      "Govardhan Parikrama",
-      "Yamuna Aarti",
-      "ISKCON Temple",
-      "Barsana Visit",
-    ],
     triplePrice: "₹17,999",
     doublePrice: "₹22,999",
+    highlights: [
+      "Krishna Janmabhoomi Darshan",
+      "Banke Bihari Temple Visit",
+      "Govardhan Parikrama",
+      "Yamuna Aarti at Vrindavan",
+    ],
     inclusions: [
       "Accommodation",
       "Daily Meals",
@@ -532,7 +623,7 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: [
           "Arrival in Mathura",
           "Check-In",
@@ -540,14 +631,14 @@ const teerthaData = [
         ],
       },
       {
-        day: "2",
+        day: "Day 2",
         points: ["Vrindavan Temple Circuit", "Banke Bihari", "ISKCON Temple"],
       },
       {
-        day: "3",
+        day: "Day 3",
         points: ["Govardhan Parikrama", "Barsana Visit", "Yamuna Aarti"],
       },
-      { day: "4", points: ["Morning Darshan", "Breakfast", "Departure"] },
+      { day: "Day 4", points: ["Morning Darshan", "Breakfast", "Departure"] },
     ],
     staysHeading: "Devotional Heritage Stay",
     staysDesc:
@@ -566,28 +657,36 @@ const teerthaData = [
         items: ["Yamuna Aarti", "Ras Lila", "Parikrama"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "badrinath",
     name: "Badrinath Dham Yatra",
-    tagline: "Seat of Lord Vishnu in the Himalayas",
-    slogan: "Jai Badri Vishal",
+    description:
+      "Embark on the sacred Char Dham Yatra to Badrinath, the abode of Lord Vishnu nestled between the Nar and Narayan mountain ranges at an altitude of 3,133 metres.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1200&q=80",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80",
+    ],
+    region: "Uttarakhand",
+    significance: "One of the four Char Dhams; abode of Lord Vishnu at 3133m",
     duration: "7 Days / 6 Nights",
-    region: "Badrinath, Uttarakhand",
+    tagline: "Jai Badri Vishal",
+    slogan: "Jai Badri Vishal",
     date: "10 Jun 2027",
     desc: "Embark on the sacred Char Dham Yatra to Badrinath, the abode of Lord Vishnu nestled between the Nar and Narayan mountain ranges at an altitude of 3,133 metres.",
-    highlights: [
-      "Badrinath Temple Darshan",
-      "Tapt Kund Holy Bath",
-      "Mana Village Visit",
-      "Vyas Gufa",
-      "Brahma Kapal",
-      "Neelkanth Peak View",
-    ],
     triplePrice: "₹36,999",
     doublePrice: "₹42,999",
+    highlights: [
+      "Badrinath Temple Darshan",
+      "Holy Dip at Tapt Kund",
+      "Brahma Kapal Puja",
+      "Visit to Mana Village & Vyas Gufa",
+    ],
     inclusions: [
       "Accommodation",
       "Meals",
@@ -597,18 +696,21 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: ["Arrival at Haridwar", "Orientation", "Transfer to Rishikesh"],
       },
-      { day: "2", points: ["Drive to Joshimath", "Temple Visits"] },
-      { day: "3", points: ["Drive to Badrinath", "Evening Darshan"] },
+      { day: "Day 2", points: ["Drive to Joshimath", "Temple Visits"] },
+      { day: "Day 3", points: ["Drive to Badrinath", "Evening Darshan"] },
       {
-        day: "4",
+        day: "Day 4",
         points: ["Morning Abhishek", "Tapt Kund Bath", "Mana Village"],
       },
-      { day: "5", points: ["Brahma Kapal Puja", "Vyas Gufa", "Meditation"] },
-      { day: "6", points: ["Return to Joshimath", "Narsingh Temple"] },
-      { day: "7", points: ["Return Drive", "Departure"] },
+      {
+        day: "Day 5",
+        points: ["Brahma Kapal Puja", "Vyas Gufa", "Meditation"],
+      },
+      { day: "Day 6", points: ["Return to Joshimath", "Narsingh Temple"] },
+      { day: "Day 7", points: ["Return Drive", "Departure"] },
     ],
     staysHeading: "High Altitude Himalayan Lodge",
     staysDesc:
@@ -627,28 +729,36 @@ const teerthaData = [
         items: ["Sunrise Darshan", "Holy Dip", "Mountain Meditation"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "somnath",
     name: "Somnath Jyotirlinga Yatra",
-    tagline: "The First Jyotirlinga of India",
-    slogan: "Om Namo Shivaya",
+    description:
+      "Visit the eternal Somnath temple, the first of the twelve Jyotirlingas, standing proudly on the shores of the Arabian Sea and bearing witness to centuries of devotion and resilience.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=80",
     img: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=1200&q=80",
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1200&q=80",
+    ],
+    region: "Gujarat",
+    significance: "First of the twelve Jyotirlingas; eternal seaside shrine",
     duration: "4 Days / 3 Nights",
-    region: "Somnath, Gujarat",
+    tagline: "Om Namo Shivaya",
+    slogan: "Om Namo Shivaya",
     date: "15 Oct 2026",
     desc: "Visit the eternal Somnath temple, the first of the twelve Jyotirlingas, standing proudly on the shores of the Arabian Sea and bearing witness to centuries of devotion and resilience.",
-    highlights: [
-      "Somnath Jyotirlinga Darshan",
-      "Sound & Light Show",
-      "Triveni Sangam",
-      "Bhalka Tirth",
-      "Prabhas Patan",
-      "Sunset Aarti by the Sea",
-    ],
     triplePrice: "₹16,999",
     doublePrice: "₹21,999",
+    highlights: [
+      "Somnath Temple Darshan",
+      "Sound & Light Show",
+      "Triveni Sangam Visit",
+      "Bhalka Tirth Pilgrimage",
+    ],
     inclusions: [
       "Accommodation",
       "Daily Meals",
@@ -657,16 +767,22 @@ const teerthaData = [
       "Guide Services",
     ],
     itinerary: [
-      { day: "1", points: ["Arrival in Somnath", "Check-In", "Sunset Aarti"] },
       {
-        day: "2",
+        day: "Day 1",
+        points: ["Arrival in Somnath", "Check-In", "Sunset Aarti"],
+      },
+      {
+        day: "Day 2",
         points: ["Morning Darshan", "Triveni Sangam", "Sound & Light Show"],
       },
       {
-        day: "3",
+        day: "Day 3",
         points: ["Bhalka Tirth", "Prabhas Patan Museum", "Meditation"],
       },
-      { day: "4", points: ["Morning Abhishek", "Breakfast", "Departure"] },
+      {
+        day: "Day 4",
+        points: ["Morning Abhishek", "Breakfast", "Departure"],
+      },
     ],
     staysHeading: "Seaside Temple Retreat",
     staysDesc:
@@ -685,28 +801,36 @@ const teerthaData = [
         items: ["Sound & Light Show", "Sunset Aarti", "Morning Abhishek"],
       },
     ],
+    isPublished: true,
   },
 
   {
     slug: "haridwar-rishikesh",
     name: "Haridwar Rishikesh Ganga Yatra",
-    tagline: "Gateway to the Gods",
-    slogan: "Har Ki Pauri",
+    description:
+      "Immerse yourself in the spiritual energy of Haridwar and Rishikesh, where the sacred Ganga descends from the Himalayas and where saints and seekers have gathered for thousands of years.",
+    thumbnailImage:
+      "https://images.unsplash.com/photo-1591018653342-d8e434811e7d?w=800&q=80",
     img: "https://images.unsplash.com/photo-1591018653342-d8e434811e7d?w=1600&q=80",
+    galleryImages: [
+      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1200&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+    ],
+    region: "Uttarakhand",
+    significance: "Gateway to the Char Dhams; sacred Ganga descent point",
     duration: "5 Days / 4 Nights",
-    region: "Haridwar & Rishikesh, Uttarakhand",
+    tagline: "Har Ki Pauri",
+    slogan: "Har Ki Pauri",
     date: "18 Sep 2026",
     desc: "Immerse yourself in the spiritual energy of Haridwar and Rishikesh, where the sacred Ganga descends from the Himalayas and where saints and seekers have gathered for thousands of years.",
-    highlights: [
-      "Har Ki Pauri Ganga Aarti",
-      "Laxman Jhula",
-      "Triveni Ghat",
-      "Yoga & Meditation Classes",
-      "Parmarth Niketan Aarti",
-      "Forest Research Institute",
-    ],
     triplePrice: "₹15,999",
     doublePrice: "₹20,999",
+    highlights: [
+      "Ganga Aarti at Har Ki Pauri",
+      "Morning Yoga by the Ganga",
+      "Chandi Devi & Mansa Devi Temple Visits",
+      "Parmarth Niketan Evening Aarti",
+    ],
     inclusions: [
       "Accommodation",
       "Daily Meals",
@@ -716,22 +840,22 @@ const teerthaData = [
     ],
     itinerary: [
       {
-        day: "1",
+        day: "Day 1",
         points: ["Arrival in Haridwar", "Check-In", "Har Ki Pauri Aarti"],
       },
       {
-        day: "2",
+        day: "Day 2",
         points: ["Chandi Devi Temple", "Mansa Devi Temple", "Ganga Bath"],
       },
       {
-        day: "3",
+        day: "Day 3",
         points: ["Drive to Rishikesh", "Laxman Jhula", "Parmarth Aarti"],
       },
       {
-        day: "4",
+        day: "Day 4",
         points: ["Morning Yoga", "Triveni Ghat", "Meditation by Ganga"],
       },
-      { day: "5", points: ["Morning Dip", "Breakfast", "Departure"] },
+      { day: "Day 5", points: ["Morning Dip", "Breakfast", "Departure"] },
     ],
     staysHeading: "Ganga-View Ashram Stay",
     staysDesc:
@@ -750,5 +874,6 @@ const teerthaData = [
         items: ["Ganga Aarti", "Yoga Session", "Meditation"],
       },
     ],
+    isPublished: true,
   },
 ];

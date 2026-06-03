@@ -1,4 +1,4 @@
-const yatraData = [
+export const yatras = [
   {
     slug: "char-dham-yatra-2025",
     name: "Char Dham Yatra",

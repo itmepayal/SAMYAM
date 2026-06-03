@@ -1,4 +1,18 @@
-const videos = [
+type VideoCategory =
+  | "Testimonials"
+  | "Kashi Knowledge Portal"
+  | "Kashi Knowledge Portal • Quick Bits";
+
+interface Video {
+  title: string;
+  description: string;
+  category: VideoCategory;
+  youtubeLink: string;
+  thumbnailImage: string;
+  featured: boolean;
+  isPublished: boolean;
+}
+export const videos: Video[] = [
   {
     title: "Introduction to Kashi Knowledge Portal",
     description:
