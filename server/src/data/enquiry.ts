@@ -35,48 +35,6 @@ export const enquiries = [
       "I am a solo traveller in my 30s. Is the Amarnath trek suitable without prior trekking experience? What fitness level is required?",
   },
   {
-    name: "Kavitha Reddy",
-    phoneNumber: "+91 95555 44433",
-    preferredYatra: "Shirdi Sai Baba Yatra",
-    message:
-      "We are a group of 10 devotees from Hyderabad planning to visit Shirdi. Can you arrange a private group tour in September?",
-  },
-  {
-    name: "Mohan Das",
-    phoneNumber: "+91 88001 22334",
-    preferredYatra: "Kedarnath & Badrinath Do Dham Yatra",
-    message:
-      "I am 62 years old. Is the helicopter option available for Kedarnath? Please advise on the best route for senior citizens.",
-  },
-  {
-    name: "Deepa Krishnamurthy",
-    phoneNumber: "+91 93322 11445",
-    preferredYatra: "Rameswaram & Madurai Pilgrimage",
-    message:
-      "I would like to know if the 22 theerthams bath is guided by a priest and whether the tour departs from Bangalore or Chennai.",
-  },
-  {
-    name: "Amit Agarwal",
-    phoneNumber: "+91 76543 21098",
-    preferredYatra: "Rishikesh & Haridwar Spiritual Retreat",
-    message:
-      "My wife and I are looking for a yoga and meditation focused retreat. Is the October batch confirmed? Please share the full itinerary PDF.",
-  },
-  {
-    name: "Sunita Bhatt",
-    phoneNumber: "+91 98001 77665",
-    preferredYatra: "Puri Jagannath Yatra",
-    message:
-      "We want to attend the Rath Yatra in July. How early should we book to get good viewing arrangements? Travelling with 2 elderly parents.",
-  },
-  {
-    name: "Harish Kulkarni",
-    phoneNumber: "+91 82233 44556",
-    preferredYatra: "Dwarka & Somnath Yatra",
-    message:
-      "Travelling from Ahmedabad in December. Can the pickup be arranged from Ahmedabad directly? Also, is the Bet Dwarka boat ride included?",
-  },
-  {
     name: "Lakshmi Iyer",
     phoneNumber: "+91 90044 55667",
     preferredYatra: "Navagraha Temples Yatra – Tamil Nadu",
