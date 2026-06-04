@@ -22,7 +22,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://samyam-frontend.pages.dev/",
+      "https://samyam-frontend.pages.dev",
       "http://localhost:3000",
       "http://localhost:5173",
       "https://samyam.co",
